@@ -3,11 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://b2lv2tfpvkloj" path="res://assets/icon.svg" id="1_3vyb7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
-radius = 63.07139
+radius = 6.0827627
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
