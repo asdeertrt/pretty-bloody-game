@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c717jdyrd06jn"]
+[gd_scene load_steps=5 format=3 uid="uid://c717jdyrd06jn"]
 
 [ext_resource type="Texture2D" uid="uid://b2lv2tfpvkloj" path="res://assets/icon.svg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://j6gje73nifla" path="res://scenes/player.gd" id="1_g2els"]
@@ -6,12 +6,21 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
 radius = 6.0827627
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(12, 12)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(5, 5)
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_3vyb7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="HurtBox" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 shape = SubResource("CircleShape2D_onrkg")
+
+[node name="PhysicsBox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g2els")

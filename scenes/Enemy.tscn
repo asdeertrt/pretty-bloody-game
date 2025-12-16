@@ -2,10 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://b2lv2tfpvkloj" path="res://assets/icon.svg" id="1_3gvst"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_55jtl"]
-radius = 5.8309517
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gvst"]
+size = Vector2(12, 12)
 
 [node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(2.3202448, 0.07345702, 0, 1)
@@ -16,4 +17,4 @@ texture = ExtResource("1_3gvst")
 target_position = Vector2(250, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_55jtl")
+shape = SubResource("RectangleShape2D_3gvst")
