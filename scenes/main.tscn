@@ -27,5 +27,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 12.0
 
-[node name="Enemy" parent="." instance=ExtResource("2_0wfyh")]
+[node name="Enemy" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_0wfyh")]
 position = Vector2(628.00006, 271)
+player = NodePath("../Player")
